@@ -43,7 +43,7 @@
 							<img src="../assets/img/find_user.png" height="50" width="50" class="user-image img-responsive"/>
 						</li>
 						<li>
-							<a href="semua_pengaduan.html"> <img src="../assets/img/full.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Semua Pengaduan</a>
+							<a href="tambah_pengaduan.html"> <img src="../assets/img/full.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Semua Pengaduan</a>
 						</li>
 						  <li>
 							<a href="dalam_proses.html"> <img src="../assets/img/proses.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Dalam Proses</a>
