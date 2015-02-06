@@ -22,12 +22,11 @@ body {
 }
 
 #box {
-	left: 50%;
-	margin-left: -25%;
+	margin-left: 25%;
 	top: 500px;
-	height: 100px;
-	width: 100px;
-	background: #600000;
+	height: 200px;
+	width: 700px;
+	background-color: #C90000;
 }
 
 #page-wrapper {
