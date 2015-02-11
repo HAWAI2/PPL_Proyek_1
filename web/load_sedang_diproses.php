@@ -1,10 +1,6 @@
 <?php
-$con=mysqli_connect("localhost", "root", "", "ppl_proyek_1");
-// Check connection
-if (mysqli_connect_errno()) {
-	echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	echo "<br>";
-}
+
+include 'sql_connect.php';
 
 $resultPengaduan = mysqli_query($con,"SELECT * FROM pengaduan NATURAL JOIN taman WHERE status = 'sedang diproses'");
 

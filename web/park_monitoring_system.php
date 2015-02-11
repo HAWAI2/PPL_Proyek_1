@@ -218,30 +218,24 @@
 			
 			<!-- /. NAV SIDE  -->
 			<div id="page-wrapper" >
-				<div id="page-inner">
-					
-					<form class="form-horizontal">
+				<div id="page-inner">					
+					<form class="form-horizontal" action="pengaduan_baru.php">
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Taman</label> &nbsp;&nbsp;&nbsp;&nbsp;
-							<select id="inputTaman">
-								<option value="1">Taman Jomblo</option>
-								<option value="2">Taman Musik</option>
-								<option value="3">Taman Persib</option>
-								<option value="4">Taman Kota Bandung</option>
-								<option value="5">Taman Lalu Lintas</option>
-								<option value="6">Taman Ganesha</option>
+							<select name="id_taman">
+								<?php require 'list_taman.php' ?>
 							</select> 
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Judul</label>
 							<div class="col-sm-10">
-								<input class="form-control" id="inputJudul" placeholder="Judul" required>
+								<input class="form-control" id="judul" name="judul" placeholder="Judul">
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Isi</label>
 							<div class="col-sm-10">
-								<input class="form-control" id="inputIsi" placeholder="Isi" required>
+								<input class="form-control" id="isi" name="isi" placeholder="Isi">
 							</div>
 						</div>
 						<div class="form-group">
