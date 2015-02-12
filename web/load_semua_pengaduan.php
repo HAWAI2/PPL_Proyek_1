@@ -8,10 +8,10 @@ echo'<table class="table table-hover">
 	<caption><p style="font-size:36px">Semua Pengaduan<br><br><br></p></caption>
 	<thead>
 		<tr>
-			<th>tanggal_dibuat</th>
-			<th>nama_taman</th>
-			<th>judul</th>
-			<th>status</th>						
+			<th>Tanggal dibuat</th>
+			<th>Nama taman</th>
+			<th>Judul</th>
+			<th>Status</th>												
 		</tr>
 	</thead>
 	<tbody>

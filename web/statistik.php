@@ -21,11 +21,11 @@ echo'<table class="table table-hover">
 	<caption><p style="font-size:36px">Jumlah Semua Pengaduan Berdasar Status<br><br><br></p></caption>
 	<thead>
 		<tr>
-			<th>jumlah</th>
-			<th>menunggu</th>
-			<th>sedang_diproses</th>
-			<th>sudah_selesai</th>
-			<th>ditolak</th>
+			<th>Jumlah</th>
+			<th>Menunggu</th>
+			<th>Sedang diproses</th>
+			<th>Sudah selesai</th>
+			<th>Ditolak</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -36,5 +36,5 @@ echo'<table class="table table-hover">
 		<td>'.$jumlahPengaduanSudahSelesai.'</td>
 		<td>'.$jumlahPengaduanDitolak.'</td>
 	</tr>
-	';	
+	';
 ?>

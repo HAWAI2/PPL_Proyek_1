@@ -15,6 +15,31 @@
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"> 
 		<!-- AJAX Functions -->
 		<script>
+			function formPengaduan() {
+				// Create an XMLHttpRequest Object
+				if (window.XMLHttpRequest) {
+					xmlHttpObj = new XMLHttpRequest( );
+				} else {
+					try {
+						xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+					} catch (e) {
+						try {
+							xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+						} catch (e) {
+							xmlHttpObj = false;
+						}
+					}
+				}
+				
+				// Create a function that will receive data sent from the server
+				xmlHttpObj.open("GET", "form_pengaduan.php", true);
+				xmlHttpObj.send();
+				xmlHttpObj.onreadystatechange = function() {
+					if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+						document.getElementById("page-inner").innerHTML=xmlHttpObj.responseText;
+					}
+				}
+			}
 			function tambahPengaduan() {
 				// Create an XMLHttpRequest Object
 				if (window.XMLHttpRequest) {
@@ -172,7 +197,7 @@
 		</script>
 	</head>
 
-	<body onload="loadSemuaPengaduan">
+	<body onload="formPengaduan()">
 		<div id="wrapper">
 			<nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
 				<div class="navbar-header">
@@ -186,7 +211,8 @@
 				</div>
 
 				<div style="color: white;">
-					<p style="font-size: 50px;" class="text-center"> Park Monitoring System </p>
+					<br>
+					<p style="font-size: 40px;" class="text-center"> Pemerintahan Kota Bandung - Park Monitoring System </p>
 				</div>
 			</nav>   
 			
@@ -195,30 +221,30 @@
 				<div class="sidebar-collapse">
 					<ul class="nav" id="main-menu">
 						<li>
-							<a href="#"> <img src="../assets/img/tambah.png" height="50" width="50" onclick="return tambahPengaduan();"> &nbsp;&nbsp;&nbsp;&nbsp; Tambah Pengaduan</a>
+							<a href="#" onclick="return formPengaduan();"> <img src="../assets/img/tambah.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Tambah Pengaduan</a>
 						</li>
 						<li>
-							<a href="#"> <img src="../assets/img/full.png" height="50" width="50" onclick="return loadSemuaPengaduan();"> &nbsp;&nbsp;&nbsp;&nbsp; Semua Pengaduan</a>
+							<a href="#" onclick="return loadSemuaPengaduan();"> <img src="../assets/img/full.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Semua Pengaduan</a>
 						</li>
 						  <li>
-							<a href="#"> <img src="../assets/img/proses.png" height="50" width="50" onclick="return loadSedangDiproses();"> &nbsp;&nbsp;&nbsp;&nbsp; Dalam Proses</a>
+							<a href="#" onclick="return loadSedangDiproses();"> <img src="../assets/img/proses.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Dalam Proses</a>
 						</li>
 						<li>
-							<a href="#"> <img src="../assets/img/check.png" height="50" width="50" onclick="return loadSudahSelesai();"> &nbsp;&nbsp;&nbsp;&nbsp; Telah Ditangani</a>
+							<a href="#" onclick="return loadSudahSelesai();"> <img src="../assets/img/check.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Telah Ditangani</a>
 						</li>
 						  <li>
-							<a href="#"> <img src="../assets/img/tolak.png" height="50" width="50" onclick="return loadDitolak();"> &nbsp;&nbsp;&nbsp;&nbsp; Pengaduan Ditolak</a>
+							<a href="#" onclick="return loadDitolak();"> <img src="../assets/img/tolak.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Pengaduan Ditolak</a>
 						</li>
 						<li>
-							<a href="#"> <img src="../assets/img/statistik.png" height="50" width="50" onclick="return statistik();"> &nbsp;&nbsp;&nbsp;&nbsp; Statistik Taman</a>
+							<a href="#" onclick="return statistik();"> <img src="../assets/img/statistik.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Statistik Taman</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 			
 			<!-- /. NAV SIDE  -->
-			<div id="page-wrapper" >
-				<div id="page-inner">					
+			<div id="page-wrapper">
+				<div id="page-inner">
 					<form class="form-horizontal" action="pengaduan_baru.php">
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Taman</label> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -244,7 +270,6 @@
 							</div>
 						</div>
 					</form>
-					
 				</div>
 				 <!-- /. PAGE INNER  -->
 			</div>

@@ -1,10 +1,4 @@
 <?php
-$id_taman = $_GET["id_taman"];
-$judul = $_GET["judul"];
-$isi = $_GET["isi"];
-
-include 'sql_connect.php';
-
 echo'
 <form class="form-horizontal" action="pengaduan_baru.php">
 	<div class="form-group">
@@ -17,13 +11,13 @@ echo'
 	<div class="form-group">
 		<label class="col-sm-2 control-label">Judul</label>
 		<div class="col-sm-10">
-			<input class="form-control" id="judul" name="judul" placeholder="Judul">
+			<input class="form-control" id="judul" name="judul" placeholder="Judul" required>
 		</div>
 	</div>
 	<div class="form-group">
 		<label class="col-sm-2 control-label">Isi</label>
 		<div class="col-sm-10">
-			<input class="form-control" id="isi" name="isi" placeholder="Isi">
+			<input class="form-control" id="isi" name="isi" placeholder="Isi" required>
 		</div>
 	</div>
 	<div class="form-group">
@@ -33,15 +27,4 @@ echo'
 	</div>
 </form>
 ';
-
-// Insert into pengaduan
-$sql="INSERT INTO pengaduan (status, tanggal_dibuat, judul, isi, id_taman)
-VALUES ('menunggu', NOW(), '$judul', '$isi', '$id_taman')";
-
-if (!mysqli_query($con,$sql)) {
-	die('Error: ' . mysqli_error($con));
-}
-mysqli_close($con);
-
-header('Location:park_monitoring_system.php');
 ?>
