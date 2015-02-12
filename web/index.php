@@ -10,7 +10,7 @@
 
 <body>
 	<div class="header">
-    	<img src="assets/img/Logo.png"/>&nbsp;&nbsp;DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG
+    	<img src="../assets/img/Logo.png"/>&nbsp;&nbsp;DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG
     </div>
 	<div class="mainLayer">
         <center>

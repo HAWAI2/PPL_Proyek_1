@@ -10,17 +10,17 @@
 
 <body>
 	<div class="header">
-    	<img src="assets/img/Logo.png"/>&nbsp;&nbsp;DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG
+    	<img src="../assets/img/Logo.png"/>&nbsp;&nbsp;DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG
     </div>
     <br /><br /><br /><br />
     <div id='cssmenu'>
         <ul>
-           <li><a href='#'><span><img src="assets/img/add.png" width=50" /><span>Tambah Pengaduan</span></span></a></li>
-           <li class='active has-sub'><a href='#'><span><img src="assets/img/list.png" width="50" /><span>&nbsp;Semua Pengaduan</span></span></a></li>
-           <li><a href='#'><span><img src="assets/img/progress.png" width="50" /><span>&nbsp;Dalam Proses</span></span></a></li>
-           <li><a href='#'><span><img src="assets/img/approved.png" width="50" /><span>&nbsp;Telah Ditangani</span></span></a></li>
-           <li><a href='#'><span><img src="assets/img/deny.png" width="50" /><span>&nbsp;Pengaduan Ditolak</span></span></a></li>
-           <li class='last'><a href='#'><span><img src="assets/img/statistic.png" width="50" /><span>&nbsp;Statistik Taman</span></span></a></li>           
+           <li><a href='#'><span><img src="../assets/img/add.png" width=50" /><span>Tambah Pengaduan</span></span></a></li>
+           <li class='active has-sub'><a href='#'><span><img src="../assets/img/list.png" width="50" /><span>&nbsp;Semua Pengaduan</span></span></a></li>
+           <li><a href='#'><span><img src="../assets/img/progress.png" width="50" /><span>&nbsp;Dalam Proses</span></span></a></li>
+           <li><a href='#'><span><img src="../assets/img/approved.png" width="50" /><span>&nbsp;Telah Ditangani</span></span></a></li>
+           <li><a href='#'><span><img src="../assets/img/deny.png" width="50" /><span>&nbsp;Pengaduan Ditolak</span></span></a></li>
+           <li class='last'><a href='#'><span><img src="../assets/img/statistic.png" width="50" /><span>&nbsp;Statistik Taman</span></span></a></li>           
         </ul>
 	</div>
     <div id='contentBox'>
