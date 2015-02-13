@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Admin's PMS Page</title>
 <link href="../assets/css/index.css" rel="stylesheet" />
-<link href="../assets/css/bootstrap.css" rel="stylesheet" />
+
 </head>
 
 <body>

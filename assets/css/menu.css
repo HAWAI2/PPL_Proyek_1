@@ -162,7 +162,7 @@ body {
   position: relative;
 }
 #cssmenu ul li.has-sub > a:after {
-  content: '+';
+  content: '>';
   position: absolute;
   top: 50%;
   right: 15px;
@@ -212,7 +212,7 @@ body {
   text-align: right;
 }
 #cssmenu.align-right ul li.has-sub > a:before {
-  content: '+';
+  content: '>';
   position: absolute;
   top: 50%;
   left: 15px;
@@ -248,12 +248,11 @@ body {
 	background-color:rgba(0,51,0,1);
 }
 
-#contentBox {
+.contentBox {
 	float:right;
 	margin-left: 0.57%;
 	margin-right:0.5%;
 	margin-top:0.4%;
-	background-color:rgba(0,51,0,0.9);
 	padding-right:1%;
 	padding-left:1%;
 	width: 78%;
@@ -261,10 +260,26 @@ body {
 	font-family:'GeosansLight';
 }
 
-#contentBox h1 {
+#sudah_selesai {
+	background-color:rgba(0,51,0,0.9);
+}
+
+#ditolak {
+	background-color:rgba(153,0,0,0.9);
+}
+
+#sedang_diproses {
+	background-color:rgba(255,153,0,0.9);
+}
+
+#menunggu {
+	background-color:rgba(51,204,204,0.9);
+}
+
+.contentBox h1 {
 	font-size:30px;
 }
 
-#contentBox p {
+.contentBox p {
 	font-size:18px;
 }

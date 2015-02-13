@@ -4,31 +4,15 @@ include 'sql_connect.php';
 
 $resultPengaduan = mysqli_query($con,"SELECT * FROM pengaduan NATURAL JOIN taman WHERE status = 'ditolak'");
 
-echo'<table class="table table-hover">
-	<caption><p style="font-size:36px">Ditolak<br><br><br></p></caption>
-	<thead>
-		<tr>
-			<th>Tanggal dibuat</th>
-			<th>Nama taman</th>
-			<th>Judul</th>
-			<th>Status</th>						
-		</tr>
-	</thead>
-	<tbody>
-	';
-
 while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
-	echo'			
-		<tr>
-			<td>'.$rowPengaduan['tanggal_dibuat'].'</td>
-			<td>'.$rowPengaduan['nama'].'</td>
-			<td>'.$rowPengaduan['judul'].'</td>
-			<td>'.$rowPengaduan['status'].'</td>
-		</tr>
-	';
+	if ($rowPengaduan['status'] == "ditolak") {
+		echo'	
+			<div class="contentBox" id="'.$rowPengaduan['status'].'">
+			<h1>'.$rowPengaduan['judul'].'</h1>
+			<hr color="white" />
+			<p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.$rowPengaduan['tanggal_dibuat'].'</p>
+			</div>
+		';
+	}
 }
-echo'
-		</tbody>
-	</table>
-	';
 ?>
