@@ -14,7 +14,7 @@
         <title>Park Monitoring System</title>
     </head>
 
-    <body onload="formPengaduan()">
+    <body onload="loadSemuaPengaduan()">
         <div class="header">
             <img src="../assets/img/Logo.png"/>DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG
         </div>
@@ -29,7 +29,8 @@
                 <li style="font-size: 14px;" class='last'><a href='#' onclick="return statistik();"><img src="../assets/img/statistic.png" width="40"/>&nbsp;&nbsp;&nbsp;&nbsp;Statistik Taman</a></li>           
             </ul>
         </div>
-        <div class="contentBox" id="page-inner">
+        
+        <div id="page-inner">
         </div>
 
         <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
