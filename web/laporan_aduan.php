@@ -1,3 +1,13 @@
+<?php
+
+include 'sql_connect.php';
+include 'print_tanggal.php';
+
+$id_pengaduan = $_GET['id'];
+$res = mysqli_query($con,"SELECT * FROM pengaduan NATURAL JOIN taman WHERE id_pengaduan='$id_pengaduan'");
+$pengaduan = mysqli_fetch_array($res);
+
+echo'
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -16,16 +26,17 @@
 	<br />
     <div class="mainLayer">
     <center>
-    	<h1>Judul: Lorem Ipsum Et Dolores</h1>
+    	<h1>Judul: '.$pengaduan['judul'].'</h1>
         <hr color="white" />
-        <h2>Tanggal Aduan: 2000-01-01</h2>
-        <h2>Status: On Progress </h2>
-        <p>Isi Aduan: Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores <br />
-        Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores<br />
-        Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores Lorem Ipsum Et Dolores</p>
+        <h2>Tanggal Aduan: '.PrintTanggal($pengaduan['tanggal_dibuat']).'</h2>
+        <h2>Status: '.$pengaduan['status'].'</h2>
+        <p>Isi Aduan: '.$pengaduan['isi'].'</p>
         <hr color="white"/>
     </center>
-	<h2>Lokasi: Taman Jomblo</h2>
+	<h2>Lokasi: '.$pengaduan['nama'].'</h2>
     </div>
 </body>
 </html>
+';
+
+?>

@@ -12,6 +12,7 @@ body {
 	background-image: url("../img/green-texture.jpg");
 	background-attachment:fixed;
 	background-size:cover;
+  text-decoration: none;
 }
 
 .header {
