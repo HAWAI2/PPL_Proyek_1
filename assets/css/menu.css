@@ -283,3 +283,43 @@ body {
 .contentBox p {
 	font-size:18px;
 }
+
+.form-control {
+  display: block;
+  width: 80%;
+  height: 25px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.mainLayer {
+	margin-top:7%;
+	margin-left:2%;
+	margin-right:2%;
+	background-color:rgba(0,102,51,0.85);
+	padding:2%;
+	font-family:"GeosansLight";
+	color:rgba(255,255,255,1);
+}
+
+.mainLayer h1 {
+	font-size:36px;
+}
+
+.mainLayer h2 {
+	font-size:24px;
+}
+
+.mainLayer p {
+	font-size:18px;
+}
