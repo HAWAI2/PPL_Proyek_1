@@ -1,5 +1,6 @@
 <?php
 echo'
+<div class="contentBox">
 <form class="form-horizontal" action="pengaduan_baru.php">
 	<div class="form-group">
 		<label class="col-sm-2 control-label">Taman</label> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -26,5 +27,6 @@ echo'
 		</div>
 	</div>
 </form>
+</div>
 ';
 ?>
