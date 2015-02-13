@@ -7,25 +7,26 @@
         <script type="text/javascript" src="../assets/js/ajax.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="../assets/css/menu.css" rel="stylesheet" />
+		<link href="../assets/css/bootstrap.css" rel="stylesheet" />
+		<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="../assets/css/bootstrap-theme.css" rel="stylesheet" />
+		<link href="../assets/css/bootstrap-theme.min.css" rel="stylesheet" />
         <title>Park Monitoring System</title>
     </head>
 
     <body onload="formPengaduan()">
         <div class="header">
-            <img src="../assets/img/Logo.png"/>&nbsp;&nbsp;DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG
+            <img src="../assets/img/Logo.png"/>DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG
         </div>
         <br /><br /><br /><br />
         <div id='cssmenu'>
             <ul>
-                <li>
-                    <a href='#' onclick="return formPengaduan();"><span><img src="../assets/img/add.png" width="50" ><span>&nbsp;Tambah Pengaduan</span></span>      
-                    </a>
-                </li>
-                <li class='active has-sub'><a href='#' onclick="return loadSemuaPengaduan();"><span><img src="../assets/img/list.png" width="50" /><span>&nbsp;Semua Pengaduan</span></span></a></li>
-                <li><a href='#' onclick="return loadSedangDiproses();"><span><img src="../assets/img/progress.png" width="50" /><span>&nbsp;Dalam Proses</span></span></a></li>
-                <li><a href='#' onclick="return loadSudahSelesai();"><span><img src="../assets/img/approved.png" width="50" /><span>&nbsp;Telah Ditangani</span></span></a></li>
-                <li><a href='#' onclick="return loadDitolak();"><span><img src="../assets/img/deny.png" width="50" /><span>&nbsp;Pengaduan Ditolak</span></span></a></li>
-                <li class='last'><a href='#' onclick="return statistik();"><span><img src="../assets/img/statistic.png" width="50" /><span>&nbsp;Statistik Taman</span></span></a></li>           
+                <b><li style="font-size: 14px;"><a href='#' onclick="return formPengaduan();"><img src="../assets/img/add.png" width="40" >&nbsp;&nbsp;&nbsp;&nbsp;Tambah Pengaduan</a></li>
+				<b><li style="font-size: 14px;"><a href='#' onclick="return loadSemuaPengaduan();"><img src="../assets/img/list.png" width="40" />&nbsp;&nbsp;&nbsp;&nbsp;Semua Pengaduan</a></li>
+                <b><li style="font-size: 14px;"><a href='#' onclick="return loadSedangDiproses();"><img src="../assets/img/progress.png" width="40" />&nbsp;&nbsp;&nbsp;&nbsp;Dalam Proses</a></li>
+                <b><li style="font-size: 14px;"><a href='#' onclick="return loadSudahSelesai();"><img src="../assets/img/approved.png" width="40" />&nbsp;&nbsp;&nbsp;&nbsp;Telah Ditangani]</a></li>
+                <b><li style="font-size: 14px;"><a href='#' onclick="return loadDitolak();"><img src="../assets/img/deny.png" width="40" />&nbsp;&nbsp;&nbsp;&nbsp;Pengaduan Ditolak</a></li></b>
+                <li style="font-size: 14px;" class='last'><a href='#' onclick="return statistik();"><img src="../assets/img/statistic.png" width="40"/>&nbsp;&nbsp;&nbsp;&nbsp;Statistik Taman</a></li>           
             </ul>
         </div>
         <div class="contentBox" id="page-inner">

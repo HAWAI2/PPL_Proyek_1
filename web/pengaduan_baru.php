@@ -43,5 +43,5 @@ if (!mysqli_query($con,$sql)) {
 }
 mysqli_close($con);
 
-header('Location:park_monitoring_system.php');
+header('Location:user.php');
 ?>
