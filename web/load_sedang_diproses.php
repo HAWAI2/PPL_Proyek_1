@@ -3,7 +3,7 @@
 include 'sql_connect.php';
 include 'print_tanggal.php';
 
-$resultPengaduan = mysqli_query($con,"SELECT * FROM pengaduan NATURAL JOIN taman WHERE status = 'sedang diproses' ORDER BY tanggal_dibuat DESC");
+$resultPengaduan = mysqli_query($con,"SELECT * FROM pengaduan NATURAL JOIN taman WHERE status = 'sedang_diproses' ORDER BY tanggal_dibuat DESC");
 
 while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
 	echo'	
