@@ -264,6 +264,20 @@ body a {
 	font-family:'GeosansLight';
 }
 
+.contentBoxTable {
+	float:right;
+	margin-left:15%;
+	margin-right:0.5%;
+	margin-top:0.4%;
+	padding-top:2%;
+	padding-right:2%;
+	padding-left:2%;
+	padding-bottom:3%;
+	width: 78%;
+	color:rgba(255,255,255,1);
+	font-family:'GeosansLight';
+}
+
 #sudah_selesai {
 	background-color:rgba(0,51,0,0.9);
 }

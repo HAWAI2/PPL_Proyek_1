@@ -19,6 +19,6 @@
         <input class="form-control" type="password" id="inputPassword" placeholder="Password">
         </center>
     </div>
-    <center><a href="user.php"><div class="button">LOGIN</div></a></center>
+    <center><a href="admin.php"><div class="button">LOGIN</div></a></center>
 </body>
 </html>

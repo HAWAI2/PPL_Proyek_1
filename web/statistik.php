@@ -19,7 +19,7 @@ $jumlahPengaduanSudahSelesai = mysqli_num_rows($resultPengaduanSudahSelesai);
 $resultPengaduanDitolak = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='menunggu'");
 $jumlahPengaduanDitolak = mysqli_num_rows($resultPengaduanDitolak);
 
-echo'<div class="contentBox" id="sudah_selesai">
+echo'<div class="contentBoxTable" id="sudah_selesai">
 	<table class="table">
 	<caption><center><h1 style="color:white">Berdasarkan Status Semua Laporan yang Ada</h1></center></caption>
 	<thead>
