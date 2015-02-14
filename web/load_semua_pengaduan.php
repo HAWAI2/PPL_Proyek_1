@@ -16,10 +16,13 @@ while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
 	
 	echo'	
 		<div class="contentBox" id="'.$idstatus.'"><a href="laporan_aduan.php?id='.$rowPengaduan['id_pengaduan'].'">
+			<font color="#FFFFFF">
 			<h1>'.$rowPengaduan['judul'].'</h1>
 			<hr color="white" />
 			<p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
-		</a></div>
+		</a>
+			</font>
+		</div>
 	';
 }
 ?>

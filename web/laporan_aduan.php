@@ -26,11 +26,11 @@ echo'
 	<br />
     <div class="mainLayer">
     <center>
-    	<h1>Judul: '.$pengaduan['judul'].'</h1>
+    	<h1>'.$pengaduan['judul'].'</h1>
         <hr color="white" />
         <h2>Tanggal Aduan: '.PrintTanggal($pengaduan['tanggal_dibuat']).'</h2>
         <h2>Status: '.$pengaduan['status'].'</h2>
-        <p>Isi Aduan: '.$pengaduan['isi'].'</p>
+        <p>'.$pengaduan['isi'].'</p>
         <hr color="white"/>
     </center>
 	<h2>Lokasi: '.$pengaduan['nama'].'</h2>

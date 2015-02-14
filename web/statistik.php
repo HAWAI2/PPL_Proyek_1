@@ -19,6 +19,28 @@ $jumlahPengaduanSudahSelesai = mysqli_num_rows($resultPengaduanSudahSelesai);
 $resultPengaduanDitolak = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='menunggu'");
 $jumlahPengaduanDitolak = mysqli_num_rows($resultPengaduanDitolak);
 
+echo'<div class="contentBox" id="sudah_selesai">
+	<table class="table">
+	<caption><center><h1 style="color:white">Berdasarkan Status Semua Laporan yang Ada</h1></center></caption>
+	<thead>
+		<tr>
+			<th>Jumlah</th>
+			<th>Menunggu</th>
+			<th>Sedang diproses</th>
+			<th>Sudah selesai</th>
+			<th>Ditolak</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td align="center">'.$jumlahSemuaPengaduan.'</td>
+		<td align="center">'.$jumlahPengaduanMenunggu.'</td>
+		<td align="center">'.$jumlahPengaduanSedangDiproses.'</td>
+		<td align="center">'.$jumlahPengaduanSudahSelesai.'</td>
+		<td align="center">'.$jumlahPengaduanDitolak.'</td>
+	</tr>
+	</div>';
+
 for ($i = 1; $i <= $jumlahTaman; $i++){
 	
 	$resultPengaduan2 = mysqli_query($con,"SELECT * FROM pengaduan WHERE id_taman = " .$i);
@@ -38,28 +60,6 @@ for ($i = 1; $i <= $jumlahTaman; $i++){
 
 	$namaTaman = mysqli_query($con,"SELECT nama FROM taman WHERE id_taman = " .$i);
 	
-	echo'<div class="contentBox" id="sudah_selesai">
-	<table class="table">
-	<caption><center><h1 style="color:white">Berdasarkan Status Semua Laporan yang Ada</h1></center></caption>
-	<thead>
-		<tr>
-			<th>Jumlah</th>
-			<th>Menunggu</th>
-			<th>Sedang diproses</th>
-			<th>Sudah selesai</th>
-			<th>Ditolak</th>
-		</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td>'.$jumlahSemuaPengaduan.'</td>
-		<td>'.$jumlahPengaduanMenunggu.'</td>
-		<td>'.$jumlahPengaduanSedangDiproses.'</td>
-		<td>'.$jumlahPengaduanSudahSelesai.'</td>
-		<td>'.$jumlahPengaduanDitolak.'</td>
-	</tr>
-	</div>';
-	
 	while($rowTaman = mysqli_fetch_array($namaTaman)){
 		$Taman = $rowTaman['nama'];
 	}
@@ -78,11 +78,11 @@ for ($i = 1; $i <= $jumlahTaman; $i++){
 		</thead>
 		<tbody>
 		<tr>
-			<td>'.$jumlahSemuaPengaduan2.'</td>
-			<td>'.$jumlahPengaduanMenunggu2.'</td>
-			<td>'.$jumlahPengaduanSedangDiproses2.'</td>
-			<td>'.$jumlahPengaduanSudahSelesai2.'</td>
-			<td>'.$jumlahPengaduanDitolak2.'</td>
+			<td align="center">'.$jumlahSemuaPengaduan2.'</td>
+			<td align="center">'.$jumlahPengaduanMenunggu2.'</td>
+			<td align="center">'.$jumlahPengaduanSedangDiproses2.'</td>
+			<td align="center">'.$jumlahPengaduanSudahSelesai2.'</td>
+			<td align="center">'.$jumlahPengaduanDitolak2.'</td>
 		</tr>
 		</div>';
 	}
