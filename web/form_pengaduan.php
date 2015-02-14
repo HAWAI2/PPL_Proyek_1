@@ -1,7 +1,7 @@
 <?php
 echo'
 	<div class="formAduan">
-		<form action="pengaduan_baru.php">
+		<form method="post" action="pengaduan_baru.php">
 			<h1>Entri Pengaduan</h1>
 			Taman &nbsp;&nbsp;&nbsp;&nbsp;
 			<select name="id_taman">
@@ -13,8 +13,8 @@ echo'
 			<input class="form-control" id="judul" name="judul" placeholder="Judul" required>
 			<br>Isi&nbsp;&nbsp;<br>
 			<textarea class="form-controlTextArea" id="isi" name="isi" required></textarea>
+			<input type="submit" name="submit" value="Simpan" class="submit-button">
 		</form>
-		<right><a href="#"><div class="button"><center>MASUKKAN</center></div></a></right>
 	</div>
 ';
 ?>

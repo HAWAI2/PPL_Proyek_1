@@ -1,7 +1,7 @@
 <?php
-$id_taman = $_GET["id_taman"];
-$judul = $_GET["judul"];
-$isi = $_GET["isi"];
+$id_taman = $_POST["id_taman"];
+$judul = $_POST["judul"];
+$isi = $_POST["isi"];
 
 include 'sql_connect.php';
 
