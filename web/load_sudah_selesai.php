@@ -3,7 +3,7 @@
 include 'sql_connect.php';
 include 'print_tanggal.php';
 
-$resultPengaduan = mysqli_query($con,"SELECT * FROM pengaduan NATURAL JOIN taman WHERE status = 'sudah_selesai' ");
+$resultPengaduan = mysqli_query($con,"SELECT * FROM pengaduan NATURAL JOIN taman WHERE status = 'sudah selesai' ");
 /*
 echo'<table class="table table-hover">
 	<caption><p style="font-size:36px">Sudah Selesai<br><br><br></p></caption>

@@ -45,7 +45,10 @@
 						<li>
 							<a href="#" onclick="return loadSemuaPengaduan();"> <img src="../assets/img/full.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Semua Pengaduan</a>
 						</li>
-						  <li>
+						<li>
+							<a href="#" onclick="return loadMenunggu();"> <img src="../assets/img/full.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Menunggu</a>
+						</li>
+						<li>
 							<a href="#" onclick="return loadSedangDiproses();"> <img src="../assets/img/proses.png" height="50" width="50"> &nbsp;&nbsp;&nbsp;&nbsp; Dalam Proses</a>
 						</li>
 						<li>

@@ -25,6 +25,32 @@
 		}
 	}
 	
+	function formTaman() {
+		// Create an XMLHttpRequest Object	
+		var xmlHttpObj;	
+		if (window.XMLHttpRequest) {				
+			xmlHttpObj = new XMLHttpRequest( );
+		} else {			
+			try {
+				xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (e) {
+				try {
+					xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {
+					xmlHttpObj = false;
+				}
+			}
+		}		
+		// Create a function that will receive data sent from the server
+		xmlHttpObj.open("GET", "form_tambah_taman.php", true);
+		xmlHttpObj.send();
+		xmlHttpObj.onreadystatechange = function() {
+			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+				document.getElementById("page-inner").innerHTML=xmlHttpObj.responseText;
+			}
+		}
+	}
+	
 	function tambahPengaduan() {
 		// Create an XMLHttpRequest Object
 		var xmlHttpObj;
@@ -56,6 +82,33 @@
 		}
 	}
 
+	function loadSemuaTaman() {
+	// Create an XMLHttpRequest Object
+		var xmlHttpObj;
+		if (window.XMLHttpRequest) {
+			xmlHttpObj = new XMLHttpRequest( );
+		} else {
+			try {
+				xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (e) {
+				try {
+					xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {
+					xmlHttpObj = false;
+				}
+			}
+		}
+		
+		// Create a function that will receive data sent from the server
+		xmlHttpObj.open("GET", "load_semua_taman.php", true);
+		xmlHttpObj.send();
+		xmlHttpObj.onreadystatechange = function() {
+			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+				document.getElementById("page-inner").innerHTML=xmlHttpObj.responseText;
+			}
+		}
+	}
+	
 	function loadSemuaPengaduan() {
 	// Create an XMLHttpRequest Object
 		var xmlHttpObj;
@@ -83,6 +136,33 @@
 		}
 	}
 
+	function loadMenunggu() {
+		// Create an XMLHttpRequest Object
+		var xmlHttpObj;
+		if (window.XMLHttpRequest) {
+			xmlHttpObj = new XMLHttpRequest( );
+		} else {
+			try {
+				xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (e) {
+				try {
+					xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {
+					xmlHttpObj = false;
+				}
+			}
+		}
+		
+		// Create a function that will receive data sent from the server
+		xmlHttpObj.open("GET", "load_menunggu.php", true);
+		xmlHttpObj.send();
+		xmlHttpObj.onreadystatechange = function() {
+			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+				document.getElementById("page-inner").innerHTML=xmlHttpObj.responseText;
+			}
+		}
+	}
+	
 	function loadSedangDiproses() {
 		// Create an XMLHttpRequest Object
 		var xmlHttpObj;
@@ -183,6 +263,32 @@
 		
 		// Create a function that will receive data sent from the server
 		xmlHttpObj.open("GET", "statistik.php", true);
+		xmlHttpObj.send();
+		xmlHttpObj.onreadystatechange = function() {
+			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+				document.getElementById("page-inner").innerHTML=xmlHttpObj.responseText;
+			}
+		}
+	}
+	
+	function kirimEmail() {
+		// Create an XMLHttpRequest Object	
+		var xmlHttpObj;	
+		if (window.XMLHttpRequest) {				
+			xmlHttpObj = new XMLHttpRequest( );
+		} else {			
+			try {
+				xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (e) {
+				try {
+					xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {
+					xmlHttpObj = false;
+				}
+			}
+		}		
+		// Create a function that will receive data sent from the server
+		xmlHttpObj.open("GET", "kirim_email.php", true);
 		xmlHttpObj.send();
 		xmlHttpObj.onreadystatechange = function() {
 			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
