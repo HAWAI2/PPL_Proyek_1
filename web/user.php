@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <script src="../assets/js/jquery.min.js"></script>
-        <script type="../text/javascript" src="assets/js/index.js"></script>
+        <script type="../text/javascript" src="../assets/js/index.js"></script>
         <!-- AJAX SCRIPTS -->
         <script type="text/javascript" src="../assets/js/ajax.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
