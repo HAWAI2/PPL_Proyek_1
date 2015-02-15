@@ -28,8 +28,8 @@ while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
 				<label class="collapse" for="_1">Click Me!</label>
 					<input id="_1" type="checkbox">
 				<div height="30px">
-					<div class="button">Setujui</div>
-					<div class="button" id="ditolak">Tolak</div>
+					<a href="#" class="button">Setujui</a>
+					<a href="#" class="button" id="ditolak">Tolak</a>
 				</div>
 			</span>
 			</font>
