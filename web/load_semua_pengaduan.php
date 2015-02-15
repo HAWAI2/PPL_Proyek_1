@@ -17,10 +17,10 @@ while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
 	echo'	
 		<div class="contentBox" id="'.$idstatus.'"><a href="laporan_aduan.php?id='.$rowPengaduan['id_pengaduan'].'">
 			<font color="#FFFFFF">
-			<h1>'.$rowPengaduan['judul'].'</h1>
-			<hr color="white" />
-			<p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
-		</a>
+				<h1>'.$rowPengaduan['judul'].' &nbsp;&nbsp;&nbsp;&nbsp;<button id="terimaPengaduan">Terima Pengaduan</button></h1>
+				<hr color="white" />
+				<p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
+				<a href="kirim_email.php?id='.$rowPengaduan['id_pengaduan'].'"><p>Kirim email</p></a>
 			</font>
 		</div>
 	';
