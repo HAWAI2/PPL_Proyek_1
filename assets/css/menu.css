@@ -405,3 +405,21 @@ body a {
 	border:medium;
 	margin-top:6%;
 }
+
+.button:visited {
+	visibility:hidden;
+}
+
+.collapse{
+  font-size: 31px;
+  display:block;
+}
+.collapse + input{
+  display:none;
+}
+.collapse + input + *{
+  display:none;
+}
+.collapse+ input:checked + *{
+  display:block;
+}

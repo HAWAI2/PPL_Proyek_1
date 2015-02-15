@@ -23,10 +23,15 @@ while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
 			<hr color="white" />
 			<span>
 			<p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
-			</span>
+			</span></a>
 			<span>
-			<div class="button">Setujui</div>
-		</a>
+				<label class="collapse" for="_1">Click Me!</label>
+					<input id="_1" type="checkbox">
+				<div height="30px">
+					<div class="button">Setujui</div>
+					<div class="button" id="ditolak">Tolak</div>
+				</div>
+			</span>
 			</font>
 		</div>
 	';
