@@ -34,17 +34,29 @@ echo'
 	';
 */
 
-while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
-	echo'	
-		<div class="contentBox" id="sudah_selesai"><a href="laporan_aduan.php?id='.$rowPengaduan['id_pengaduan'].'">
+if(mysqli_num_rows($resultPengaduan) != 0) {
+	while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
+		echo'	
+			<div class="contentBox" id="sudah_selesai"><a href="laporan_aduan.php?id='.$rowPengaduan['id_pengaduan'].'">
+				<font color="#FFFFFF">
+				<h1>'.$rowPengaduan['judul'].'</h1>
+				<hr color="white" />
+				<p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
+			</a>
+				</font>
+			</div>
+		';
+	}
+}
+else {
+	echo'
+		<div class="contentBox">
 			<font color="#FFFFFF">
-			<h1>'.$rowPengaduan['judul'].'</h1>
-			<hr color="white" />
-			<p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
-		</a>
+				<h1>Tidak ada pengaduan
+				<hr color="white" />
+				<p>Silahkan masukkan pengaduan lewat pilihan "Tambah Pengaduan"</p>
 			</font>
 		</div>
 	';
 }
-
 ?>
