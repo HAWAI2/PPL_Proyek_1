@@ -23,7 +23,7 @@
                     <div class="input-group custom-search-form">
                         <input class="form-control" name="query" id="query" placeholder="Search" style="width:90%" required />
                         <span class="input-group-btn">
-                            <button type="submit" class="btn btn-default" onClick = "return searchPengaduan(2);" style="min-height:15px">
+                            <button type="submit" class="btn btn-default" onClick = "return searchPengaduan(2);" >
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </span>  
@@ -45,17 +45,5 @@
         
         <div id="page-inner">
         </div>
-        
-        <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-        <!-- JQUERY SCRIPTS -->
-        <script src="assets/js/jquery-1.10.2.js"></script>
-        <!-- AJAX SCRIPTS -->
-        <script type="text/javascript" src="../assets/js/ajax.js"></script>
-        <!-- BOOTSTRAP SCRIPTS -->
-        <script src="assets/js/bootstrap.min.js"></script>
-        <!-- METISMENU SCRIPTS -->
-        <script src="assets/js/jquery.metisMenu.js"></script>
-        <!-- CUSTOM SCRIPTS -->
-        <script src="assets/js/custom.js"></script>
     </body>
 </html>
