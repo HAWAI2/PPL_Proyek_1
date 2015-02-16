@@ -8,8 +8,8 @@ echo'
 			Nama Taman
 			<input class="form-control" id="namaTaman" name="namaTaman" placeholder="Nama taman" required>
 			<br>Alamat Taman&nbsp;&nbsp;<br>
-			<textarea class="form-controlTextArea" id="alamatTaman" name="alamatTaman" required></textarea>
-			<input type="submit" name="submitTaman" value="Simpan" class="submit-button">
+			<input class="form-control" id="alamatTaman" name="alamatTaman" placeholder="Alamat taman" required>
+			<input type="submit" name="submitTaman" value="Simpan" class="button">
 		</form>
 	</div>
 ';

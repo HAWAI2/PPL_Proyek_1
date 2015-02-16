@@ -1,7 +1,9 @@
 <?php
+$tipeuser = $_GET['user'];
+
 echo'
 	<div class="formAduan">
-		<form method="post" action="pengaduan_baru.php">
+		<form method="post" action="pengaduan_baru.php?user='.$tipeuser.'">
 			<h1>Entri Pengaduan</h1>
 			Taman &nbsp;&nbsp;&nbsp;&nbsp;
 			<select name="id_taman">

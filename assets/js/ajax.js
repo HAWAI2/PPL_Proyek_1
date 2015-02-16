@@ -1,5 +1,5 @@
 // JavaScript Document
-	function formPengaduan() {
+	function formPengaduan(user) {
 		// Create an XMLHttpRequest Object	
 		var xmlHttpObj;	
 		if (window.XMLHttpRequest) {				
@@ -16,7 +16,7 @@
 			}
 		}		
 		// Create a function that will receive data sent from the server
-		xmlHttpObj.open("GET", "form_pengaduan.php", true);
+		xmlHttpObj.open("GET", "form_pengaduan.php?user="+user, true);
 		xmlHttpObj.send();
 		xmlHttpObj.onreadystatechange = function() {
 			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
@@ -51,36 +51,36 @@
 		}
 	}
 	
-	function tambahPengaduan() {
-		// Create an XMLHttpRequest Object
-		var xmlHttpObj;
-		if (window.XMLHttpRequest) {
-			xmlHttpObj = new XMLHttpRequest( );
-		} else {
-			try {
-				xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
-			} catch (e) {
-				try {
-					xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
-				} catch (e) {
-					xmlHttpObj = false;
-				}
-			}
-		}
+	// function tambahPengaduan() {
+		// // Create an XMLHttpRequest Object
+		// var xmlHttpObj;
+		// if (window.XMLHttpRequest) {
+			// xmlHttpObj = new XMLHttpRequest( );
+		// } else {
+			// try {
+				// xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+			// } catch (e) {
+				// try {
+					// xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+				// } catch (e) {
+					// xmlHttpObj = false;
+				// }
+			// }
+		// }
 		
-		var id_taman = document.getElementById('inputTaman').value;
-		var judul = document.getElementById('inputJudul').value;
-		var isi = document.getElementById('inputIsi').value;
+		// var id_taman = document.getElementById('inputTaman').value;
+		// var judul = document.getElementById('inputJudul').value;
+		// var isi = document.getElementById('inputIsi').value;
 		
-		// Create a function that will receive data sent from the server
-		xmlHttpObj.open("GET", "pengaduan_baru.php?id_taman=" + inputTaman + "&judul=" + inputJudul + "&isi=" + inputIsi, true);
-		xmlHttpObj.send(null);
-		xmlHttpObj.onreadystatechange = function() {
-			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
-				document.getElementById("inner-page").innerHTML=xmlHttpObj.responseText;
-			}
-		}
-	}
+		// // Create a function that will receive data sent from the server
+		// xmlHttpObj.open("GET", "pengaduan_baru.php?id_taman=" + inputTaman + "&judul=" + inputJudul + "&isi=" + inputIsi, true);
+		// xmlHttpObj.send(null);
+		// xmlHttpObj.onreadystatechange = function() {
+			// if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+				// document.getElementById("inner-page").innerHTML=xmlHttpObj.responseText;
+			// }
+		// }
+	// }
 
 	function loadSemuaTaman() {
 	// Create an XMLHttpRequest Object
@@ -135,8 +135,35 @@
 			}
 		}
 	}
+	
+	function loadSemuaPengaduanAdmin() {
+	// Create an XMLHttpRequest Object
+		var xmlHttpObj;
+		if (window.XMLHttpRequest) {
+			xmlHttpObj = new XMLHttpRequest( );
+		} else {
+			try {
+				xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (e) {
+				try {
+					xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {
+					xmlHttpObj = false;
+				}
+			}
+		}
+		
+		// Create a function that will receive data sent from the server
+		xmlHttpObj.open("GET", "load_semua_pengaduan_admin.php", true);
+		xmlHttpObj.send();
+		xmlHttpObj.onreadystatechange = function() {
+			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+				document.getElementById("page-inner").innerHTML=xmlHttpObj.responseText;
+			}
+		}
+	}
 
-	function loadMenunggu() {
+	function loadMenunggu(user) {
 		// Create an XMLHttpRequest Object
 		var xmlHttpObj;
 		if (window.XMLHttpRequest) {
@@ -154,7 +181,7 @@
 		}
 		
 		// Create a function that will receive data sent from the server
-		xmlHttpObj.open("GET", "load_menunggu.php", true);
+		xmlHttpObj.open("GET", "load_menunggu.php?user="+user, true);
 		xmlHttpObj.send();
 		xmlHttpObj.onreadystatechange = function() {
 			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
@@ -289,6 +316,32 @@
 		}		
 		// Create a function that will receive data sent from the server
 		xmlHttpObj.open("GET", "kirim_email.php", true);
+		xmlHttpObj.send();
+		xmlHttpObj.onreadystatechange = function() {
+			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+				document.getElementById("page-inner").innerHTML=xmlHttpObj.responseText;
+			}
+		}
+	}
+	
+	function hapusTolak() {
+		// Create an XMLHttpRequest Object	
+		var xmlHttpObj;	
+		if (window.XMLHttpRequest) {				
+			xmlHttpObj = new XMLHttpRequest( );
+		} else {			
+			try {
+				xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+			} catch (e) {
+				try {
+					xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {
+					xmlHttpObj = false;
+				}
+			}
+		}		
+		// Create a function that will receive data sent from the server
+		xmlHttpObj.open("GET", "hapus_tolak.php", true);
 		xmlHttpObj.send();
 		xmlHttpObj.onreadystatechange = function() {
 			if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {

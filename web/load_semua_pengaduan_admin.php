@@ -23,11 +23,25 @@ while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
 	echo'	
 		<div class="contentBox" id="'.$idstatus.'"><a href="laporan_aduan.php?id='.$rowPengaduan['id_pengaduan'].'">
 			<font color="#FFFFFF">
+				<span>
 				<h1>'.$rowPengaduan['judul'].'
 				<hr color="white" />
 				<p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
+				</span>
+		';		
+		
+	if($idstatus == "menunggu"){
+		echo '
+			<span>
+			<a class="button" href="kirim_email.php?id='.$rowPengaduan['id_pengaduan'].'">Terima</a>
+			<a href="tolak_taman.php?id='.$rowPengaduan['id_pengaduan'].'" class="button" id="ditolak">Tolak</a>
+			</span>
+		';
+	}
+	echo'
 			</font>
 		</div>
+	
 	';
 }
 mysqli_close($con);

@@ -16,16 +16,26 @@
 	$message = Swift_Message::newInstance();
 	$message->setSubject('Laporan Aduan');
 	$message->setFrom(array('parkmonitoringsystem@gmail.com' => 'Park Monitoring System'));
-	$message->setTo('gifari13@gmail.com');
+	$message->setTo('williamstefanh@gmail.com');
 	$message->setBody('
 	
-Judul Pengaduan		: '.$pengaduan["judul"].'
-Tanggal Pengaduan	: '.$pengaduan["tanggal_dibuat"].'
-	
-'.$pengaduan["isi"].'
+Judul Pengaduan: '.$pengaduan["judul"].'
+Tanggal Pengaduan: '.$pengaduan["tanggal_dibuat"].'
+Isi Pengaduan: '.$pengaduan["isi"].'
+Jika sudah ditangani, silahkan klik link berikut ini: http://localhost:1337/PMS/web/laporan_selesai.php?id='.$id_pengaduan.'
 	
 	');
 	
 	$result = $mailer->send($message);
-	echo $result;
+	
+	$sql="UPDATE pengaduan SET status = 'sedang diproses' WHERE id_pengaduan = '$id_pengaduan'";
+
+	if (!mysqli_query($con,$sql)) {
+		die('Error: ' . mysqli_error($con));
+	}
 ?>
+
+<script>
+	alert("Laporan sudah dikirim ke pihak berwenang.");
+	window.location="admin.php";
+</script>

@@ -1,17 +1,18 @@
-@charset "utf-8";
+f@charset "utf-8";
 /* CSS Document */
 
 /* Please Keep this font import at the very top of any CSS file */
 /* Starter CSS for Flyout Menu */
 @font-face {
     font-family: "GeosansLight";
-    src: url(C:/Windows/Fonts/GeosansLight Medium.ttf) format("truetype");
+    src: url(../../font/Walkway_SemiBold.ttf) format("truetype");
 }
 
 body {
 	background-image: url("../img/green-texture.jpg");
 	background-attachment:fixed;
 	background-size:cover;
+	font-family: "GeosansLight";
 }
 
 body a{
@@ -20,7 +21,7 @@ body a{
 }
 
 .header {
-	font-family: "GeosansLight", Helvetica, sans-serif;
+	font-family: "GeosansLight";
 	font-size:40px;
 	color:white;
 	background-color:rgba(0,51,0,0.8);
@@ -42,7 +43,6 @@ body a{
 #cssmenu{
   float: left;
   top: 19%;
-  /* top:11.5%; */
   margin-top:0.4%;
   margin-left:0.4%;
   margin-bottom:0.4%;
@@ -69,7 +69,7 @@ body a{
   vertical-align:middle;
   line-height:50%;
   font-size:14px;
-  min-height:50px;
+  min-height:25px;
   margin-bottom:-5%;
 }
 #cssmenu ul {
@@ -125,7 +125,7 @@ body a{
 #cssmenu {
   width: 19.45%;
   background:#030;
-  font-family: 'GeosansLight', Tahoma, Arial, sans-serif;
+  font-family: 'GeosansLight';
   zoom: 1;
   font-size: 12px;
 }
@@ -397,14 +397,14 @@ body a{
 }
 
 .formTaman {
-	margin-top:3%;
-	margin-left:30%;
-	margin-right:1%;
+	margin-top:10%;
+	margin-left:27%;
+	margin-right:25%;
 	background-color:rgba(153,204,0,0.9);
 	padding-top:2%;
 	padding-right:2%;
 	padding-bottom:3%;
-	padding-left:8%;
+	padding-left:2%;
 	font-family:"GeosansLight";
 	color:white;
 	font-size:20px;

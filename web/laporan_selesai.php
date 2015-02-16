@@ -4,6 +4,12 @@ include 'sql_connect.php';
 include 'print_tanggal.php';
 
 $id_pengaduan = $_GET['id'];
+$sql="UPDATE pengaduan SET status = 'sudah selesai' WHERE id_pengaduan = '$id_pengaduan'";
+
+if (!mysqli_query($con,$sql)) {
+	die('Error: ' . mysqli_error($con));
+}
+
 $res = mysqli_query($con,"SELECT * FROM pengaduan NATURAL JOIN taman WHERE id_pengaduan='$id_pengaduan'");
 $pengaduan = mysqli_fetch_array($res);
 
@@ -26,7 +32,7 @@ echo'
 	<br />
     <div class="mainLayer">
     <center>
-    	<h1>'.$pengaduan['judul'].'</h1>
+    	<h1> Pengaduan dengan judul '.$pengaduan['judul'].' sudah diselesaikan</h1>
         <hr color="white" />
         <h2>Tanggal Aduan: '.PrintTanggal($pengaduan['tanggal_dibuat']).'</h2>
         <h2>Status: '.$pengaduan['status'].'</h2>

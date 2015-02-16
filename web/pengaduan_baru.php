@@ -2,6 +2,7 @@
 $id_taman = $_POST["id_taman"];
 $judul = $_POST["judul"];
 $isi = $_POST["isi"];
+$tipeuser = $_GET['user'];
 
 include 'sql_connect.php';
 
@@ -14,5 +15,11 @@ if (!mysqli_query($con,$sql)) {
 }
 mysqli_close($con);
 
-header('Location:user.php');
+if($tipeuser == 1){
+	header('Location:user.php');
+}
+else{
+	header('Location:admin.php');
+}
+
 ?>
