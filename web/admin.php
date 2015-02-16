@@ -27,7 +27,7 @@
                         <input class="form-control" name="query" id="query" placeholder="Search" style="width:90%" required />
 >>>>>>> a4e36fdddb6431a56931ebca95919cb0c252c7d1
                         <span class="input-group-btn">
-                            <button type="submit" class="btn btn-default" onClick = "return searchPengaduan(2);" style="min-height:15px">
+                            <button type="submit" class="btn btn-default" onClick = "return searchPengaduan(2);" >
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </span>  

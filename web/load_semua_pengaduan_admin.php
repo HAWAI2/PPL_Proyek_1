@@ -33,10 +33,10 @@ if(mysqli_num_rows($resultPengaduan) != 0) {
 			
 		if($idstatus == "menunggu"){
 			echo '
-				<span>
+				<div id="divMenunggu">
 				<a class="button" href="kirim_email.php?id='.$rowPengaduan['id_pengaduan'].'">Terima</a>
 				<a href="tolak_taman.php?id='.$rowPengaduan['id_pengaduan'].'" class="button" id="ditolak">Tolak</a>
-				</span>
+				</div>
 			';
 		}
 		echo'
