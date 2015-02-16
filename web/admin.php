@@ -21,11 +21,8 @@
             <ul class="nav nav-pills nav-stacked text-center">
                 <form method="post" class="navbar-form navbar-left" role="search" action="#" onsubmit="return false;">
                     <div class="input-group custom-search-form">
-<<<<<<< HEAD
-                        <input styleClass="form-control" name="query" id="query" placeholder="Search" required/>
-=======
+
                         <input class="form-control" name="query" id="query" placeholder="Search" style="width:90%" required />
->>>>>>> a4e36fdddb6431a56931ebca95919cb0c252c7d1
                         <span class="input-group-btn">
                             <button type="submit" class="btn btn-default" onClick = "return searchPengaduan(2);" >
                                 <span class="glyphicon glyphicon-search"></span>
