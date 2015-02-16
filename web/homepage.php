@@ -11,7 +11,7 @@
 <body>
 	<div class="header">
             <img src="../assets/img/Logo.png"/><a href="homepage.php">DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG</a>
-			<center><p style="font-size:12px" >Jalan Ambon No 1 A, Bandung, Jawa Barat; Telepon: 0224231921</p></center>
+			<center><p style="font-size:14px" >Jalan Ambon No 1 A, Bandung, Jawa Barat; Telepon: 0224231921</p></center>
         </div>
 	<div class="mainLayer">
         <center>
