@@ -10,10 +10,10 @@ $jumlahSemuaPengaduan = mysqli_num_rows($resultPengaduan);
 $resultPengaduanMenunggu = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='menunggu'");
 $jumlahPengaduanMenunggu = mysqli_num_rows($resultPengaduanMenunggu);
 
-$resultPengaduanSedangDiproses = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='sedang_diproses'");
+$resultPengaduanSedangDiproses = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='sedang diproses'");
 $jumlahPengaduanSedangDiproses = mysqli_num_rows($resultPengaduanSedangDiproses);
 
-$resultPengaduanSudahSelesai = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='sudah_selesai'");
+$resultPengaduanSudahSelesai = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='sudah selesai'");
 $jumlahPengaduanSudahSelesai = mysqli_num_rows($resultPengaduanSudahSelesai);
 
 $resultPengaduanDitolak = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='ditolak'");
@@ -49,10 +49,10 @@ for ($i = 1; $i <= $jumlahTaman; $i++){
 	$resultPengaduanMenunggu2 = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='menunggu' AND id_taman = " .$i);
 	$jumlahPengaduanMenunggu2 = mysqli_num_rows($resultPengaduanMenunggu2);
 
-	$resultPengaduanSedangDiproses2 = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='sedang_diproses' AND id_taman = " .$i);
+	$resultPengaduanSedangDiproses2 = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='sedang diproses' AND id_taman = " .$i);
 	$jumlahPengaduanSedangDiproses2 = mysqli_num_rows($resultPengaduanSedangDiproses2);
 
-	$resultPengaduanSudahSelesai2 = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='sudah_selesai' AND id_taman = " .$i);
+	$resultPengaduanSudahSelesai2 = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='sudah selesai' AND id_taman = " .$i);
 	$jumlahPengaduanSudahSelesai2 = mysqli_num_rows($resultPengaduanSudahSelesai2);
 
 	$resultPengaduanDitolak2 = mysqli_query($con,"SELECT * FROM pengaduan WHERE status='ditolak' AND id_taman = " .$i);
