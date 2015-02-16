@@ -12,7 +12,6 @@ if(mysqli_num_rows($resultTaman) != 0) {
 				<font color="#FFFFFF">
 					<h1>'.$rowTaman['nama'].'</h1>
 					<p>Lokasi : '.$rowTaman['alamat'].'<br/>
-					<hr color="white"/>
 				</font>
 			</div>
 		';
