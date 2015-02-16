@@ -21,7 +21,7 @@
             <ul class="nav nav-pills nav-stacked text-center">
                 <form method="post" class="navbar-form navbar-left" role="search" action="#" onsubmit="return false;">
                     <div class="input-group custom-search-form">
-                        <input styleClass="form-control" name="query" id="query" placeholder="Search" required />
+                        <input styleClass="form-control" name="query" id="query" placeholder="Search" required/>
                         <span class="input-group-btn">
                             <button type="submit" class="btn btn-default" onClick = "return searchPengaduan(1);" >
                                 <span class="glyphicon glyphicon-search"></span>
@@ -39,9 +39,9 @@
                 <b><li><a href='#' onclick="return loadDitolak();"><span><img src="../assets/img/deny.png" width="30" /><span>&nbsp;&nbsp;&nbsp;&nbsp;Pengaduan Ditolak</span></span></a></li></b>
                 <b><li class='last'><a href='#' onclick="return statistik();"><span><img src="../assets/img/statistic.png" width="30"/><span>&nbsp;&nbsp;&nbsp;&nbsp;Statistik Taman</span></span></a></li></b>
             </ul>
-        </div>
-        
-        <div id="page-inner">
+        </div> 
+       
+		<div id="page-inner">
         </div>
     </body>
 </html>

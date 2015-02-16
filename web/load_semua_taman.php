@@ -20,7 +20,7 @@ if(mysqli_num_rows($resultTaman) != 0) {
 }
 else {
 	echo'
-		<div class="contentBox">
+		<div class="contentBox" id="sudah_selesai">
 			<font color="#FFFFFF">
 				<h1>Tidak ada taman yang terdaftar
 				<hr color="white" />

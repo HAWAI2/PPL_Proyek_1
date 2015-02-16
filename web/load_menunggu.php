@@ -30,7 +30,7 @@ if(mysqli_num_rows($resultPengaduan) != 0) {
 }
 else {
 	echo'
-		<div class="contentBox">
+		<div class="contentBox" id="sudah_selesai">
 			<font color="#FFFFFF">
 				<h1>Tidak ada pengaduan
 				<hr color="white" />

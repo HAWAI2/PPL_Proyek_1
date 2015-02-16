@@ -10,4 +10,5 @@ if (!mysqli_query($con,$sql)) {
 }
 mysqli_close($con);
 
+header('Location:admin.php');
 ?>
