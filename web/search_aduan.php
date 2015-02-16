@@ -17,7 +17,7 @@ $querysql = $querysql . "judul LIKE '%" . end($searchquery) . "%' OR isi LIKE '%
 $resultPengaduan = mysqli_query($con, $querysql);
 
 echo'
-	<div class="contentBox">
+	<div class="contentBox" id="sudah_selesai">
 		<h2> Hasil pencarian : '.$searchquery[0].' 
 ';
 $i=1;
@@ -26,7 +26,7 @@ while ($i < count($searchquery)){
 	$i++;
 }
 echo'
-	</h2>
+		</h2>
 	</div>
 ';
 

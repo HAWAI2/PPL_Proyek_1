@@ -17,8 +17,10 @@ if(mysqli_num_rows($resultPengaduan) != 0) {
 		';
 		if($tipeuser == 2){
 			echo '
+				<div class="divMenunggu">
 				<a class="button" href="kirim_email.php?id='.$rowPengaduan['id_pengaduan'].'">Terima</a>
-				<a class="button" id="ditolak" href="tolak_taman.php?id='.$rowPengaduan['id_pengaduan'].'">Tolak</a>
+				<a href="tolak_taman.php?id='.$rowPengaduan['id_pengaduan'].'" class="button" id="ditolak" >Tolak</a>
+				</div>
 			';
 		}
 		echo'
