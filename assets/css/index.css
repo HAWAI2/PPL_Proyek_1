@@ -11,6 +11,10 @@ body {
 	background-size:cover;
 }
 
+span {
+	display:inline-block;
+}
+
 .mainLayer {
 	margin-top:7%;
 	margin-left:2%;
@@ -71,7 +75,7 @@ body p {
 }
 
 .header img {
-	width:60px;
+	width:80px;
 }
 
 .loginBox {
