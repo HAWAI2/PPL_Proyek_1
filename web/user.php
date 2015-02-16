@@ -7,16 +7,29 @@
         <script type="text/javascript" src="../assets/js/ajax.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="../assets/css/menu.css" rel="stylesheet" />
+        <link href="../assets/css/bootstrap.css" rel="stylesheet" />
         <title>Park Monitoring System</title>
     </head>
 
-    <body onload="loadSemuaPengaduan()">
+    <body onload="loadSemuaPengaduan();">
         <div class="header">
             <img src="../assets/img/Logo.png"/><a href="homepage.php">DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG</a>
 			<center><p style="font-size:14px" >Jalan Ambon No 1 A, Bandung, Jawa Barat; Telepon: 0224231921</p></center>
         </div>
         <br /><br /><br /><br />
         <div id='cssmenu'>
+            <ul class="nav nav-pills nav-stacked text-center">
+                <form method="post" class="navbar-form navbar-left" role="search" action="#" onsubmit="return false;">
+                    <div class="input-group custom-search-form">
+                        <input styleClass="form-control" name="query" id="query" placeholder="Search" required />
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default" onClick = "return searchPengaduan(1);" >
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>  
+                    </div>
+                </form>
+            </ul>
             <ul>
                 <b><li><a href='#' onclick="return formPengaduan(1);"><span><img src="../assets/img/add.png" width="30" ><span>&nbsp;&nbsp;&nbsp;&nbsp;Tambah Pengaduan</span></span></a></li></b>
 				<b><li><a href='#' onclick="return loadSemuaPengaduan();"><span><img src="../assets/img/list.png" width="30" /><span>&nbsp;&nbsp;&nbsp;&nbsp;Semua Pengaduan</span></span></a></li></b>

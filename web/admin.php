@@ -7,6 +7,7 @@
         <script type="text/javascript" src="../assets/js/ajax.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="../assets/css/menu.css" rel="stylesheet" />
+        <link href="../assets/css/bootstrap.css" rel="stylesheet" />
         <title>Park Monitoring System</title>
     </head>
 
@@ -17,6 +18,18 @@
         </div>
         <br /><br /><br /><br />
         <div id='cssmenu'>
+            <ul class="nav nav-pills nav-stacked text-center">
+                <form method="post" class="navbar-form navbar-left" role="search" action="#" onsubmit="return false;">
+                    <div class="input-group custom-search-form">
+                        <input styleClass="form-control" name="query" id="query" placeholder="Search" required />
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default" onClick = "return searchPengaduan(2);" >
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>  
+                    </div>
+                </form>
+            </ul>
             <ul>
                 <b><li><a href='#' onclick="return formPengaduan(2);"><span><img src="../assets/img/add.png" width="30" ><span>&nbsp;&nbsp;&nbsp;&nbsp;Tambah Pengaduan</span></span></a></li></b>
 				<b><li><a href='#' onclick="return formTaman();"><span><img src="../assets/img/add.png" width="30" ><span>&nbsp;&nbsp;&nbsp;&nbsp;Tambah Taman</span></span></a></li></b>
