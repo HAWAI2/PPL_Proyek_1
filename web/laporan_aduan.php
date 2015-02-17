@@ -21,7 +21,10 @@ echo'
 	
 <body>
 	<div class="header">
-		<img src="../assets/img/Logo.png"/>&nbsp;&nbsp;DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG
+            <span><img src="../assets/img/Logo.png" /></span>
+            <span><a href="homepage.php">DINAS PERTAMANAN DAN PEMAKAMAN KOTA BANDUNG</a>
+			<center><p style="font-size:14px" >Jalan Ambon No 1 A, Bandung, Jawa Barat; Telepon: 0224231921</p></center>
+            </span>
 	</div>
 	<br />
     <div class="mainLayer">

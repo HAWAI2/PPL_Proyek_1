@@ -34,14 +34,14 @@
                 </form>
             </ul>
             <ul>
-                <b><li><a href='#' onclick="return formPengaduan(2);"><span><img src="../assets/img/add.png" width="30" ><span>&nbsp;&nbsp;&nbsp;&nbsp;Tambah Pengaduan</span></span></a></li></b>
+                <b><li><a href='#' onclick="return formPengaduan(2);"><span><img src="../assets/img/add.png" width="30" ><span>&nbsp;&nbsp;Tambah Pengaduan</span></span></a></li></b>
 				<b><li><a href='#' onclick="return formTaman();"><span><img src="../assets/img/add.png" width="30" ><span>&nbsp;&nbsp;Tambah Taman</span></span></a></li></b>
 				<b><li><a href='#' onclick="return loadSemuaTaman();"><span><img src="../assets/img/list.png" width="30" /><span>&nbsp;&nbsp;Semua Taman</span></span></a></li></b>
-				<b><li><a href='#' onclick="return loadSemuaPengaduanAdmin();"><span><img src="../assets/img/list.png" width="30" /><span>&nbsp;&nbsp;&nbsp;&nbsp;Semua Pengaduan</span></span></a></li></b>
+				<b><li><a href='#' onclick="return loadSemuaPengaduanAdmin();"><span><img src="../assets/img/list.png" width="30" /><span>&nbsp;&nbsp;Semua Pengaduan</span></span></a></li></b>
 				<b><li><a href='#' onclick="return loadMenunggu(2);"><span><img src="../assets/img/hourglass.png" width="30" /><span>&nbsp;&nbsp;Menunggu</span></span></a></li></b>
                 <b><li><a href='#' onclick="return loadSedangDiproses();"><span><img src="../assets/img/progress.png" width="30" /><span>&nbsp;&nbsp;Dalam Proses</span></span></a></li></b>
                 <b><li><a href='#' onclick="return loadSudahSelesai();"><span><img src="../assets/img/approved.png" width="30" /><span>&nbsp;&nbsp;Telah Ditangani</span></span></a></li></b>
-                <b><li><a href='#' onclick="return loadDitolak();"><span><img src="../assets/img/deny.png" width="30" /><span>&nbsp;&nbsp;&nbsp;&nbsp;Pengaduan Ditolak</span></span></a></li></b>
+                <b><li><a href='#' onclick="return loadDitolak();"><span><img src="../assets/img/deny.png" width="30" /><span>&nbsp;&nbsp;Pengaduan Ditolak</span></span></a></li></b>
                 <b><li class='last'><a href='#' onclick="return statistik();"><span><img src="../assets/img/statistic.png" width="30"/><span>&nbsp;&nbsp;Statistik Taman</span></span></a></li></b>
             </ul>
         </div>

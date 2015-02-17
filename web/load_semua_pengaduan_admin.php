@@ -52,7 +52,7 @@ else {
 			<font color="#FFFFFF">
 				<h1>Tidak ada pengaduan
 				<hr color="white" />
-				<p>Silahkan masukkan pengaduan lewat pilihan "Tambah Pengaduan"</p>
+				<p>Silahkan masukkan pengaduan melalui pilihan "Tambah Pengaduan"</p>
 			</font>
 		</div>
 	';

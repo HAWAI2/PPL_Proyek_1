@@ -30,29 +30,40 @@ echo'
 	</div>
 ';
 
-while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
-	$idstatus = $rowPengaduan['status'];
-	if($idstatus == "sedang diproses"){
-		$idstatus = "sedang_diproses";
-	}
-	else if($idstatus == "sudah selesai"){
-		$idstatus = "sudah_selesai";
-	}
-	
-	echo'	
-		<div class="contentBox" id="'.$idstatus.'"><a href="laporan_aduan.php?id='.$rowPengaduan['id_pengaduan'].'">
-			<font color="#FFFFFF">
-				<h1>'.$rowPengaduan['judul'].'
-				<hr color="white" />
-				<p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
-	';
-	if($tipeuser == 2 && $idstatus == "menunggu"){
-		echo '
-			<a class="button" href="kirim_email.php?id='.$rowPengaduan['id_pengaduan'].'">Terima</a>
-			<a class="button" id="ditolak" href="tolak_taman.php?id='.$rowPengaduan['id_pengaduan'].'">Tolak</a>
+if(mysqli_num_rows($resultPengaduan) != 0) {
+	while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
+		$idstatus = $rowPengaduan['status'];
+		if($idstatus == "sedang diproses"){
+			$idstatus = "sedang_diproses";
+		}
+		else if($idstatus == "sudah selesai"){
+			$idstatus = "sudah_selesai";
+		}
+		
+		echo'	
+			<div class="contentBox" id="'.$idstatus.'"><a href="laporan_aduan.php?id='.$rowPengaduan['id_pengaduan'].'">
+				<font color="#FFFFFF">
+					<h1>'.$rowPengaduan['judul'].'
+					<hr color="white" />
+					<p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
+		';
+		if($tipeuser == 2 && $idstatus == "menunggu"){
+			echo '
+				<a class="button" href="kirim_email.php?id='.$rowPengaduan['id_pengaduan'].'">Terima</a>
+				<a class="button" id="ditolak" href="tolak_taman.php?id='.$rowPengaduan['id_pengaduan'].'">Tolak</a>
+			';
+		}
+		echo'
+				</font>
+			</div>
 		';
 	}
+}
+else {
 	echo'
+		<div class="contentBox" id="sudah_selesai">
+			<font color="#FFFFFF">
+				<h1>Tidak ada pengaduan yang mengandung kata kunci sesuai input
 			</font>
 		</div>
 	';

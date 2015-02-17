@@ -16,13 +16,13 @@
 	$message = Swift_Message::newInstance();
 	$message->setSubject('Laporan Aduan');
 	$message->setFrom(array('parkmonitoringsystem@gmail.com' => 'Park Monitoring System'));
-	$message->setTo('williamstefanh@gmail.com');
+	$message->setTo('asilvanus5@gmail.com');
 	$message->setBody('
 	
 Judul Pengaduan: '.$pengaduan["judul"].'
 Tanggal Pengaduan: '.$pengaduan["tanggal_dibuat"].'
 Isi Pengaduan: '.$pengaduan["isi"].'
-Jika sudah ditangani, silahkan klik link berikut ini: http://localhost:1337/PMS/web/laporan_selesai.php?id='.$id_pengaduan.'
+Jika sudah ditangani, silahkan klik link berikut ini: http://localhost/PPL_Proyek_1/web/laporan_selesai.php?id='.$id_pengaduan.'
 	
 	');
 	

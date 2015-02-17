@@ -333,7 +333,7 @@ body a:hover{
 
 .form-controlTextArea {
   display: block;
-  width: 490px;
+  width: 495px;
   height: 159px;
   padding: 6px 12px;
   font-size: 14px;
@@ -412,7 +412,7 @@ body a:hover{
 	padding-top:2%;
 	padding-right:2%;
 	padding-bottom:3%;
-	padding-left:8%;
+	padding-left:2%;
 	font-family:"GeosansLight";
 	color:white;
 	font-size:20px;
