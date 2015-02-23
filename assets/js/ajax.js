@@ -377,3 +377,32 @@
 			}
 		}
 	}
+
+	function deletetaman(id_taman) {
+		if(confirm("Apakah anda yakin ingin menghapus taman ini?")){
+			// Create an XMLHttpRequest Object
+			var xmlHttpObj;
+			if (window.XMLHttpRequest) {
+				xmlHttpObj = new XMLHttpRequest( );
+			} else {
+				try {
+					xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+				} catch (e) {
+					try {
+						xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+					} catch (e) {
+						xmlHttpObj = false;
+					}
+				}
+			}
+			
+			// Create a function that will receive data sent from the server
+			xmlHttpObj.open("GET", "hapus_taman.php?id=" + id_taman, true);
+			xmlHttpObj.send(null);
+			xmlHttpObj.onreadystatechange = function() {
+				if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+					document.getElementById("page-inner").innerHTML=xmlHttpObj.responseText;
+				}
+			}
+		}
+	}

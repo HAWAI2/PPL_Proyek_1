@@ -28,7 +28,7 @@ echo'
 		<div class="formTaman">
 		<center>
 		<form method="post" action="edit_taman.php?id_taman='.$taman['id_taman'].'" >
-			<h1>Entri Taman</h1>
+			<h1>Edit Taman</h1>
 			Nama Taman
 			<input class="form-control" id="namaTaman" name="namaTaman" value="'.$taman['nama'].'" required>
 			<br>Alamat Taman&nbsp;&nbsp;<br>

@@ -382,3 +382,53 @@ line-height: 1.428571429;
 }
    
 }
+
+/*==============================================
+    BUTTON EDIT DELETE
+    =============================================*/
+.edit-delete, .edit-delete a:hover, .edit-delete a:link, .edit-delete a:visited, .edit-delete a:focus { 
+  color: #FFFFFF; 
+  background-color: #F0AD4E; 
+  border-color: #F0AD4E; 
+  text-decoration: none;
+}
+ 
+.edit-delete:hover, 
+.edit-delete:focus, 
+.edit-delete:active, 
+.edit-delete.active, 
+.open .dropdown-toggle.edit-delete { 
+  color: #FFFFFF; 
+  background-color: #F0AD4E; 
+  border-color: #F0AD4E; 
+} 
+ 
+.edit-delete:active, 
+.edit-delete.active, 
+.open .dropdown-toggle.edit-delete { 
+  background-image: none; 
+} 
+ 
+.edit-delete.disabled, 
+.edit-delete[disabled], 
+fieldset[disabled] .edit-delete, 
+.edit-delete.disabled:hover, 
+.edit-delete[disabled]:hover, 
+fieldset[disabled] .edit-delete:hover, 
+.edit-delete.disabled:focus, 
+.edit-delete[disabled]:focus, 
+fieldset[disabled] .edit-delete:focus, 
+.edit-delete.disabled:active, 
+.edit-delete[disabled]:active, 
+fieldset[disabled] .edit-delete:active, 
+.edit-delete.disabled.active, 
+.edit-delete[disabled].active, 
+fieldset[disabled] .edit-delete.active { 
+  background-color: #F0AD4E; 
+  border-color: #F0AD4E; 
+} 
+ 
+.edit-delete .badge { 
+  color: #F0AD4E; 
+  background-color: #FFFFFF; 
+}    
